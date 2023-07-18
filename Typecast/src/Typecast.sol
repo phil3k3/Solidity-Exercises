@@ -6,7 +6,10 @@ contract Typecast {
      * the goal of this exercise is to pass if msg.value is equal to the address of this contract or revert otherwise
      */
 
+    event Address(address a, address b);
+
     function typeCast() external payable {
-        // your code here
+       emit Address(address(uint160(msg.value)), address(this));
+       require(address(uint160(msg.value)) == address(this));
     }
 }

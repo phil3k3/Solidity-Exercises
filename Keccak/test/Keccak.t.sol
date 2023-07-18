@@ -17,8 +17,8 @@ contract KeccakTest is Test {
         bool hash3Correct;
 
         uint256 value1 = 55;
-        uint256 value2 = 42;
-        uint256 value3 = 6728927;
+        uint256 value2 = 55;
+        uint256 value3 = 55;
 
         address addr = address(keccak);
 
@@ -27,25 +27,21 @@ contract KeccakTest is Test {
         bool success3;
 
         assembly {
+            mstore(0x00, hex"ba79920e")
             mstore(0x80, value1)
             let hash1 := keccak256(0x80, 0x20)
-
-            mstore(0x80, value2)
-            let hash2 := keccak256(0x80, 0x20)
-
-            mstore(0x80, value3)
-            let hash3 := keccak256(0x80, 0x20)
-
-            mstore(0x00, hex"ba79920e")
-
             mstore(0x04, value1)
             success1 := call(gas(), addr, 0x00, 0x00, 0x24, 0x80, 0x20)
             hash1Correct := eq(hash1, mload(0x80))
 
+            mstore(0x80, value2)
+            let hash2 := keccak256(0x80, 0x20)
             mstore(0x04, value2)
             success2 := call(gas(), addr, 0x00, 0x00, 0x24, 0x80, 0x20)
             hash1Correct := eq(hash2, mload(0x80))
 
+            mstore(0x80, value3)
+            let hash3 := keccak256(0x80, 0x20)
             mstore(0x04, value3)
             success3 := call(gas(), addr, 0x00, 0x00, 0x24, 0x80, 0x20)
             hash1Correct := eq(hash3, mload(0x80))

@@ -18,6 +18,8 @@ contract ReducingPayout {
     }
 
     function withdraw() public {
-        // your code here
+        uint256 secondsBetween = block.timestamp - depositedTime;
+        uint256 result = address(this).balance - (address(this).balance * (11574 * secondsBetween)/1000000000);
+        msg.sender.call{value: result}("");
     }
 }

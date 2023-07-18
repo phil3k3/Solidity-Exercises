@@ -34,12 +34,13 @@ contract TimelockEscrowTest is Test {
         uint256 timelockEscrowBalanceBefore = address(timelockEscrow).balance;
         uint256 sellerBefore = address(timelockEscrow).balance;
 
+        console.log("BEFORE: %d", sellerBefore);
         vm.prank(SELLER);
         timelockEscrow.sellerWithdraw(address(this));
 
         uint256 timelockEscrowBalanceAfter = address(timelockEscrow).balance;
         uint256 sellerAfter = address(SELLER).balance;
-
+        console.log("AFTER: %d", sellerAfter);
         assertEq(
             timelockEscrowBalanceBefore - timelockEscrowBalanceAfter,
             1 ether,

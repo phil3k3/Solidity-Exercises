@@ -1,0 +1,496 @@
+Nothing to compile
+No files changed, compilation skipped
+
+Running 1 test for test/InheritanceOverride.t.sol:InheritanceOverrideTest
+[32m[PASS][0m testGetNumber() (gas: 5436)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 404.42µs
+No files changed, compilation skipped
+
+Running 3 tests for test/SpecialNumbers.t.sol:SpecialNumbersTest
+[32m[PASS][0m testIsNumberSpecial() (gas: 20368)
+[32m[PASS][0m testMakeNumberNotSpecial() (gas: 19487)
+[32m[PASS][0m testMakeNumberSpecial() (gas: 28729)
+Test result: [32mok[0m. 3 passed; 0 failed; finished in 451.71µs
+No files changed, compilation skipped
+
+Running 1 test for test/PriceIsRight.t.sol:PriceIsRightTest
+[32m[PASS][0m testBuy(uint256) (runs: 256, μ: 22114, ~: 22526)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 8.37ms
+No files changed, compilation skipped
+
+Running 1 test for test/IsPrime.t.sol:IsPrimeTest
+[32m[PASS][0m testIsPrime() (gas: 36969)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 538.21µs
+No files changed, compilation skipped
+
+Running 1 test for test/Deployer.t.sol:DeployerTest
+[32m[PASS][0m testGreeting() (gas: 9472)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 462.08µs
+No files changed, compilation skipped
+
+Running 2 tests for test/PureVsView.t.sol:PureVsViewTest
+[32m[PASS][0m testGetX() (gas: 7568)
+[32m[PASS][0m testGetY() (gas: 7513)
+Test result: [32mok[0m. 2 passed; 0 failed; finished in 403.83µs
+No files changed, compilation skipped
+
+Running 2 tests for test/Immutable.t.sol:ContractImmutableTest
+[32m[PASS][0m testContractImmutable() (gas: 86764)
+[32m[PASS][0m testContractImmutable2() (gas: 86786)
+Test result: [32mok[0m. 2 passed; 0 failed; finished in 462.42µs
+No files changed, compilation skipped
+
+Running 1 test for test/TripleNestedMapping.t.sol:TripleNestedMappingTest
+[32m[PASS][0m testTripleNestedMapping() (gas: 81004)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 431.25µs
+No files changed, compilation skipped
+
+Running 1 test for test/Emitter.t.sol:EmitterTest
+[32m[PASS][0m testEmitterEvent() (gas: 11070)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 421.50µs
+No files changed, compilation skipped
+
+Running 1 test for test/NotEnough.t.sol:NotEnoughTest
+[32m[PASS][0m testPrintNumWithFive() (gas: 9971)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 404.21µs
+No files changed, compilation skipped
+
+Running 1 test for test/Donations.t.sol:DonationsTest
+[32m[PASS][0m testDonate() (gas: 100222)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 528.88µs
+No files changed, compilation skipped
+
+Running 1 test for test/Mean.t.sol:MeanTest
+[32m[PASS][0m testMean() (gas: 15913)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 429.67µs
+No files changed, compilation skipped
+
+Running 1 test for test/Owner.t.sol:OwnerTest
+[32m[PASS][0m testUpdateMagicNumber() (gas: 24805)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 463.33µs
+No files changed, compilation skipped
+
+Running 1 test for test/Typecast.t.sol:TypecastTest
+[31m[FAIL. Reason: Assertion failed.][0m testTypecast() (gas: 40185)
+Logs:
+  Error: Expected call with value == address to pass
+  Error: a == b not satisfied [bool]
+        Left: false
+       Right: true
+
+Traces:
+  [40185] [32mTypecastTest[0m::[32mtestTypecast[0m() [33m[0m
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m() [33m[0m
+    │   └─ [34m← [0m()
+    ├─ [1480] [31mTypecast[0m::[31mtypeCast[0m{value: 1000000000000000000}() [33m[0m
+    │   ├─ emit [36mAddress[0m(a: 0x0000000000000000000000000de0b6B3a7640000, b: Typecast: [0x5615dEB798BB3E4dFa0139dFa1b3D433Cc23b72f])
+    │   └─ [31m← [0m"EvmError: Revert"
+    ├─ [0] [31mTypecast[0m::[31mtypecast[0m{value: 491460923342184218035706888008750043977755113263}() [33m[0m
+    │   └─ [31m← [0m"EvmError: OutOfFund"
+    ├─ emit [36mlog_named_string[0m(key: Error, val: Expected call with value == address to pass)
+    ├─ emit [36mlog[0m(: Error: a == b not satisfied [bool])
+    ├─ emit [36mlog_named_string[0m(key:       Left, val: false)
+    ├─ emit [36mlog_named_string[0m(key:      Right, val: true)
+    ├─ [0] [34mVM[0m::[34mstore[0m(VM: [0x7109709ECfa91a80626fF3989D68f67F5b1DD12D], 0x6661696c65640000000000000000000000000000000000000000000000000000, 0x0000000000000000000000000000000000000000000000000000000000000001) [33m[0m
+    │   └─ [34m← [0m()
+    └─ [32m← [0m()
+
+Test result: [31mFAILED[0m. 0 passed; 1 failed; finished in 515.79µs
+
+Failing tests:
+Encountered 1 failing test in test/Typecast.t.sol:TypecastTest
+[31m[FAIL. Reason: Assertion failed.][0m testTypecast() (gas: 40185)
+
+Encountered a total of [31m1[0m failing tests, [32m0[0m tests succeeded
+No files changed, compilation skipped
+
+Running 1 test for test/IsSorted.t.sol:IsSortedTest
+[32m[PASS][0m testIsSorted() (gas: 15205)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 450.17µs
+No files changed, compilation skipped
+
+Running 1 test for test/PublicVariable.t.sol:PublicVariableTest
+[32m[PASS][0m testMagicNumber() (gas: 7548)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 424.50µs
+No files changed, compilation skipped
+
+Running 2 tests for test/IdiotBetting.t.sol:IdiotBettingTest
+[32m[PASS][0m testBetAndClaim() (gas: 136326)
+[32m[PASS][0m testBetAndClaim1() (gas: 157874)
+Test result: [32mok[0m. 2 passed; 0 failed; finished in 604.17µs
+No files changed, compilation skipped
+
+Running 1 test for test/AccessModifiers.t.sol:AccessModifiersTest
+[32m[PASS][0m testAccessModifiers() (gas: 33240)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 460.71µs
+No files changed, compilation skipped
+
+Running 1 test for test/SumArray.t.sol:SumArrayTest
+[32m[PASS][0m testSumArray() (gas: 11283)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 443.63µs
+No files changed, compilation skipped
+
+Running 1 test for test/SelfDestroyer.t.sol:SelfDestroyerTest
+[32m[PASS][0m testSelfDestroyer() (gas: 15208)
+Logs:
+  Self Destroyer balance before: 10000000000000000000
+  Self Destroyer balance after: 0
+
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 472.75µs
+No files changed, compilation skipped
+
+Running 2 tests for test/TimeLockEscrow.t.sol:TimelockEscrowTest
+[32m[PASS][0m testTimelock() (gas: 59538)
+Logs:
+  BEFORE: 1000000000000000000
+  AFTER: 2000000000000000000
+
+[32m[PASS][0m testTimelockBuyerWithdraws() (gas: 55091)
+Test result: [32mok[0m. 2 passed; 0 failed; finished in 733.83µs
+No files changed, compilation skipped
+
+Running 1 test for test/Encoder.t.sol:EncoderTest
+[32m[PASS][0m testEncodedData() (gas: 166470)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 652.08µs
+No files changed, compilation skipped
+
+Running 1 test for test/Exponent.t.sol:ExponentTest
+[32m[PASS][0m testGetExpResult() (gas: 9492)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 401.04µs
+No files changed, compilation skipped
+
+Running 1 test for test/Divide.t.sol:DivideTest
+[32m[PASS][0m testDivide() (gas: 8487)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 637.04µs
+No files changed, compilation skipped
+
+Running 1 test for test/InsertInArray.t.sol:InsertInArrayTest
+[32m[PASS][0m testReplaceAtIndex() (gas: 24936)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 515.08µs
+No files changed, compilation skipped
+
+Running 1 test for test/Enum.t.sol:EnumTest
+[32m[PASS][0m testIsWeekend() (gas: 11268)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 428.63µs
+No files changed, compilation skipped
+
+Running 2 tests for test/TicTacToe.t.sol:TicTacToeTest
+[32m[PASS][0m testIsLosing() (gas: 10769)
+[32m[PASS][0m testIsWinning() (gas: 11259)
+Test result: [32mok[0m. 2 passed; 0 failed; finished in 482.08µs
+No files changed, compilation skipped
+
+Running 1 test for test/Decoder.t.sol:DecoderTest
+[32m[PASS][0m testDecodedData():(string,uint256) (gas: 19703)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 534.75µs
+No files changed, compilation skipped
+
+Running 1 test for test/DeployContract.t.sol:DeployContractTest
+[32m[PASS][0m testGetGreetings() (gas: 5611)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 366.25µs
+No files changed, compilation skipped
+
+Running 4 tests for test/ReducingPayout.t.sol:ReducingPayoutTest
+[32m[PASS][0m testWithdraw() (gas: 41908)
+[32m[PASS][0m testWithdraw1() (gas: 41898)
+[32m[PASS][0m testWithdraw2() (gas: 41952)
+[31m[FAIL. Reason: Assertion failed.][0m testWithdraw3() (gas: 49551)
+Logs:
+  Error: Assertion Failed
+
+Traces:
+  [49551] [32mReducingPayoutTest[0m::[32mtestWithdraw3[0m() [33m[0m
+    ├─ [0] [34mVM[0m::[34mstartPrank[0m(0x0000000000000000000000000000000000000BeD) [33m[0m
+    │   └─ [34m← [0m()
+    ├─ [0] [34mVM[0m::[34mwarp[0m(86400 [2;49;39m[8.64e4][0m) [33m[0m
+    │   └─ [34m← [0m()
+    ├─ [32432] [32mReducingPayout[0m::[32mwithdraw[0m() [33m[0m
+    │   ├─ [0] [32m0x0000000000000000000000000000000000000BeD[0m::[32mfallback[0m{value: 6400000000000}() [33m[0m
+    │   │   └─ [32m← [0m()
+    │   └─ [32m← [0m()
+    ├─ emit [36mlog[0m(: Error: Assertion Failed)
+    ├─ [0] [34mVM[0m::[34mstore[0m(VM: [0x7109709ECfa91a80626fF3989D68f67F5b1DD12D], 0x6661696c65640000000000000000000000000000000000000000000000000000, 0x0000000000000000000000000000000000000000000000000000000000000001) [33m[0m
+    │   └─ [34m← [0m()
+    ├─ [0] [34mVM[0m::[34mstopPrank[0m() [33m[0m
+    │   └─ [34m← [0m()
+    └─ [32m← [0m()
+
+Test result: [31mFAILED[0m. 3 passed; 1 failed; finished in 637.71µs
+
+Failing tests:
+Encountered 1 failing test in test/ReducingPayout.t.sol:ReducingPayoutTest
+[31m[FAIL. Reason: Assertion failed.][0m testWithdraw3() (gas: 49551)
+
+Encountered a total of [31m1[0m failing tests, [32m3[0m tests succeeded
+No files changed, compilation skipped
+
+Running 1 test for test/PublicFunction.t.sol:PublicFunctionTest
+[32m[PASS][0m testMagicNumber() (gas: 5433)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 403.25µs
+No files changed, compilation skipped
+
+Running 1 test for test/Unchecked.t.sol:UncheckedTest
+[32m[PASS][0m testUnchecked() (gas: 7573)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 411.63µs
+No files changed, compilation skipped
+
+Running 1 test for test/StudentDB.t.sol:StudentDBTest
+[32m[PASS][0m testGetEntireStruct() (gas: 12325)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 450.29µs
+No files changed, compilation skipped
+
+Running 1 test for test/CrossContract.t.sol:CrossContractTest
+[32m[PASS][0m testGetLowerPrice() (gas: 77183)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 507.92µs
+No files changed, compilation skipped
+
+Running 1 test for test/Keccak.t.sol:KeccakTest
+[31m[FAIL. Reason: Assertion failed.][0m testKeccak() (gas: 38515)
+Logs:
+  Error: keccak256 of 42 is incorrect
+  Error: a == b not satisfied [bool]
+        Left: false
+       Right: true
+  Error: keccak256 of 6728927 is incorrect
+  Error: a == b not satisfied [bool]
+        Left: false
+       Right: true
+
+Traces:
+  [38515] [32mKeccakTest[0m::[32mtestKeccak[0m() [33m[0m
+    ├─ [398] [32mKeccak[0m::[32mkeccak[0m(55) [33m[0m
+    │   └─ [32m← [0m0x42a7b7dd785cd69714a189dffb3fd7d7174edc9ece837694ce50f7078f7c31ae
+    ├─ [398] [32mKeccak[0m::[32mkeccak[0m(42) [33m[0m
+    │   └─ [32m← [0m0xbeced09521047d05b8960b7e7bcc1d1292cf3e4b2a6b63f48335cbde5f7545d2
+    ├─ [398] [32mKeccak[0m::[32mkeccak[0m(6728927 [2;49;39m[6.728e6][0m) [33m[0m
+    │   └─ [32m← [0m0xb4ce3c037ba5a6f8c643ea02c76ab64c0901ef27ea181dd97c6941007b196943
+    ├─ emit [36mlog_named_string[0m(key: Error, val: keccak256 of 42 is incorrect)
+    ├─ emit [36mlog[0m(: Error: a == b not satisfied [bool])
+    ├─ emit [36mlog_named_string[0m(key:       Left, val: false)
+    ├─ emit [36mlog_named_string[0m(key:      Right, val: true)
+    ├─ [0] [34mVM[0m::[34mstore[0m(VM: [0x7109709ECfa91a80626fF3989D68f67F5b1DD12D], 0x6661696c65640000000000000000000000000000000000000000000000000000, 0x0000000000000000000000000000000000000000000000000000000000000001) [33m[0m
+    │   └─ [34m← [0m()
+    ├─ emit [36mlog_named_string[0m(key: Error, val: keccak256 of 6728927 is incorrect)
+    ├─ emit [36mlog[0m(: Error: a == b not satisfied [bool])
+    ├─ emit [36mlog_named_string[0m(key:       Left, val: false)
+    ├─ emit [36mlog_named_string[0m(key:      Right, val: true)
+    ├─ [0] [34mVM[0m::[34mstore[0m(VM: [0x7109709ECfa91a80626fF3989D68f67F5b1DD12D], 0x6661696c65640000000000000000000000000000000000000000000000000000, 0x0000000000000000000000000000000000000000000000000000000000000001) [33m[0m
+    │   └─ [34m← [0m()
+    └─ [32m← [0m()
+
+Test result: [31mFAILED[0m. 0 passed; 1 failed; finished in 479.04µs
+
+Failing tests:
+Encountered 1 failing test in test/Keccak.t.sol:KeccakTest
+[31m[FAIL. Reason: Assertion failed.][0m testKeccak() (gas: 38515)
+
+Encountered a total of [31m1[0m failing tests, [32m0[0m tests succeeded
+No files changed, compilation skipped
+
+Running 1 test for test/FilterOddNumbers.t.sol:FilterOddNumbersTest
+[32m[PASS][0m testFilterOddNumbers() (gas: 26526)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 635.96µs
+No files changed, compilation skipped
+
+Running 5 tests for src/CodeSize.sol:CodeSize
+[32m[PASS][0m test() (gas: 186)
+[32m[PASS][0m test2() (gas: 142)
+[32m[PASS][0m test3() (gas: 98)
+[32m[PASS][0m test4() (gas: 164)
+[32m[PASS][0m test5() (gas: 120)
+Test result: [32mok[0m. 5 passed; 0 failed; finished in 237.67µs
+
+Running 1 test for test/CodeSize.t.sol:CodeSizeTest
+[31m[FAIL. Reason: Assertion failed.][0m testCodeSize() (gas: 24810)
+Logs:
+  Error: Contract must be greater than 1kb
+  Error: a == b not satisfied [bool]
+        Left: false
+       Right: true
+
+Traces:
+  [24810] [32mCodeSizeTest[0m::[32mtestCodeSize[0m() [33m[0m
+    ├─ emit [36mlog_named_string[0m(key: Error, val: Contract must be greater than 1kb)
+    ├─ emit [36mlog[0m(: Error: a == b not satisfied [bool])
+    ├─ emit [36mlog_named_string[0m(key:       Left, val: false)
+    ├─ emit [36mlog_named_string[0m(key:      Right, val: true)
+    ├─ [0] [34mVM[0m::[34mstore[0m(VM: [0x7109709ECfa91a80626fF3989D68f67F5b1DD12D], 0x6661696c65640000000000000000000000000000000000000000000000000000, 0x0000000000000000000000000000000000000000000000000000000000000001) [33m[0m
+    │   └─ [34m← [0m()
+    └─ [32m← [0m()
+
+Test result: [31mFAILED[0m. 0 passed; 1 failed; finished in 387.75µs
+
+Failing tests:
+Encountered 1 failing test in test/CodeSize.t.sol:CodeSizeTest
+[31m[FAIL. Reason: Assertion failed.][0m testCodeSize() (gas: 24810)
+
+Encountered a total of [31m1[0m failing tests, [32m5[0m tests succeeded
+No files changed, compilation skipped
+
+Running 2 tests for test/IfStatement.t.sol:IfStatementTest
+[32m[PASS][0m testMax() (gas: 5644)
+[32m[PASS][0m testMin() (gas: 5613)
+Test result: [32mok[0m. 2 passed; 0 failed; finished in 472.42µs
+No files changed, compilation skipped
+
+Running 1 test for test/Receive.t.sol:DonationsTest
+[32m[PASS][0m testDonate() (gas: 15044)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 373.21µs
+No files changed, compilation skipped
+
+Running 1 test for test/Everythingworks.t.sol:EverythingWorksTest
+[32m[PASS][0m testEverythingWorks() (gas: 303)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 343.13µs
+No files changed, compilation skipped
+
+Running 1 test for test/Distribute.t.sol:DistributeTest
+[32m[PASS][0m testDistributeEther() (gas: 153509)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 573.08µs
+No files changed, compilation skipped
+
+Running 3 tests for test/Add.t.sol:AddTest
+[32m[PASS][0m testAddOne() (gas: 6508)
+[32m[PASS][0m testAddThree() (gas: 5655)
+[32m[PASS][0m testAddTwo() (gas: 5689)
+Test result: [32mok[0m. 3 passed; 0 failed; finished in 395.29µs
+No files changed, compilation skipped
+
+Running 1 test for test/Super.t.sol:SuperTest
+[32m[PASS][0m testGetGreetings() (gas: 6927)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 557.63µs
+No files changed, compilation skipped
+
+Running 1 test for test/DistributeV2.t.sol:DistributeV2Test
+[32m[PASS][0m testDistributeEther() (gas: 130800)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 449.88µs
+No files changed, compilation skipped
+
+Running 1 test for test/BlockNumber.t.sol:BlockNumberTest
+[32m[PASS][0m testCallMe() (gas: 57145)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 483.58µs
+No files changed, compilation skipped
+
+Running 2 tests for test/BasicBankV2.t.sol:BasicBankV2Test
+[32m[PASS][0m testAddEther() (gas: 37569)
+[32m[PASS][0m testRemoveEther() (gas: 33127)
+Test result: [32mok[0m. 2 passed; 0 failed; finished in 515.71µs
+No files changed, compilation skipped
+
+Running 1 test for test/Fibonacci.t.sol:FibonacciTest
+[32m[PASS][0m testFibonacci() (gas: 14537)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 421.71µs
+No files changed, compilation skipped
+
+Running 1 test for test/NestedMapping.t.sol:NestedMappingTest
+[32m[PASS][0m testNestedDetails() (gas: 77580)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 492.42µs
+No files changed, compilation skipped
+
+Running 4 tests for test/Stack.t.sol:StackTest
+[32m[PASS][0m testPeek() (gas: 18804)
+[32m[PASS][0m testPop() (gas: 22746)
+[32m[PASS][0m testPush() (gas: 43833)
+[32m[PASS][0m testSize() (gas: 7611)
+Test result: [32mok[0m. 4 passed; 0 failed; finished in 488.04µs
+Nothing to compile
+No files changed, compilation skipped
+
+Running 1 test for test/MultiInheritance.t.sol:MultiInheritanceTest
+[32m[PASS][0m testMultiInheritance() (gas: 6264)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 384.38µs
+No files changed, compilation skipped
+
+Running 2 tests for test/OriginVsSender.t.sol:originVsSenderTest
+[32m[PASS][0m testSetNumber() (gas: 32537)
+[32m[PASS][0m testSetNumber_OriginNotSender() (gas: 9920)
+Test result: [32mok[0m. 2 passed; 0 failed; finished in 430.50µs
+No files changed, compilation skipped
+
+Running 1 test for test/Withdraw.t.sol:WithdrawTest
+[32m[PASS][0m testWithdraw() (gas: 22323)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 482.50µs
+No files changed, compilation skipped
+
+Running 2 tests for test/OneWeekLockup.t.sol:OneWeekLockupTest
+[32m[PASS][0m testDepositEther() (gas: 60716)
+[31m[FAIL. Reason: EvmError: Revert][0m testWithdrawEther() (gas: 115807)
+Traces:
+  [115807] [31mOneWeekLockupTest[0m::[31mtestWithdrawEther[0m() [33m[0m
+    ├─ [0] [34mVM[0m::[34mdeal[0m(OneWeekLockupTest: [0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496], 1000000000000000000 [2;49;39m[1e18][0m) [33m[0m
+    │   └─ [34m← [0m()
+    ├─ [44591] [32mOneWeekLockup[0m::[32mdepositEther[0m{value: 1000000000000000000}() [33m[0m
+    │   └─ [32m← [0m()
+    ├─ [0] [34mVM[0m::[34mdeal[0m(0x000000000000000000000000000000000000dEaD, 340282366920938463463374607431768211456 [2;49;39m[3.402e38][0m) [33m[0m
+    │   └─ [34m← [0m()
+    ├─ [0] [34mVM[0m::[34mprank[0m(0x000000000000000000000000000000000000dEaD) [33m[0m
+    │   └─ [34m← [0m()
+    ├─ [44591] [32mOneWeekLockup[0m::[32mdepositEther[0m{value: 1000000000000000000}() [33m[0m
+    │   └─ [32m← [0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m() [33m[0m
+    │   └─ [34m← [0m()
+    ├─ [480] [31mOneWeekLockup[0m::[31mwithdrawEther[0m(1000000000000000000 [2;49;39m[1e18][0m) [33m[0m
+    │   └─ [31m← [0m"EvmError: Revert"
+    ├─ [0] [34mVM[0m::[34mwarp[0m(604801 [2;49;39m[6.048e5][0m) [33m[0m
+    │   └─ [34m← [0m()
+    ├─ [0] [34mVM[0m::[34mexpectRevert[0m() [33m[0m
+    │   └─ [34m← [0m()
+    ├─ [480] [31mOneWeekLockup[0m::[31mwithdrawEther[0m(2000000000000000000 [2;49;39m[2e18][0m) [33m[0m
+    │   └─ [31m← [0m"EvmError: Revert"
+    ├─ [480] [31mOneWeekLockup[0m::[31mwithdrawEther[0m(1000000000000000000 [2;49;39m[1e18][0m) [33m[0m
+    │   └─ [31m← [0m"EvmError: Revert"
+    └─ [31m← [0m"EvmError: Revert"
+
+Test result: [31mFAILED[0m. 1 passed; 1 failed; finished in 536.75µs
+
+Failing tests:
+Encountered 1 failing test in test/OneWeekLockup.t.sol:OneWeekLockupTest
+[31m[FAIL. Reason: EvmError: Revert][0m testWithdrawEther() (gas: 115807)
+
+Encountered a total of [31m1[0m failing tests, [32m1[0m tests succeeded
+No files changed, compilation skipped
+
+Running 1 test for test/WhoCalledMe.t.sol:SumArrayTest
+[32m[PASS][0m testCallMe() (gas: 28509)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 494.75µs
+No files changed, compilation skipped
+
+Running 1 test for test/ListOfNumbers.t.sol:ListOfNumbersTest
+[32m[PASS][0m testListOfNumbers() (gas: 98606)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 485.04µs
+No files changed, compilation skipped
+
+Running 2 tests for test/BasicBank.t.sol:BasicBankTest
+[32m[PASS][0m testAddEther() (gas: 37547)
+[32m[PASS][0m testRemoveEther() (gas: 34676)
+Test result: [32mok[0m. 2 passed; 0 failed; finished in 503.79µs
+No files changed, compilation skipped
+
+Running 1 test for test/FizzBuzz.t.sol:FizzBuzzTest
+[32m[PASS][0m testFizzBuzz() (gas: 14497)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 421.63µs
+No files changed, compilation skipped
+
+Running 2 tests for test/BasicStorage.t.sol:BasicStorageTest
+[32m[PASS][0m testGetX() (gas: 28324)
+[32m[PASS][0m testSetX() (gas: 30555)
+Test result: [32mok[0m. 2 passed; 0 failed; finished in 364.71µs
+Compiling 1 files with 0.8.20
+Solc 0.8.20 finished in 308.36ms
+Error: 
+[31mCompiler run [31mfailed:[0m
+[1;31mError (9582)[0m[1;37m: Member "mint" not found or not visible after argument-dependent lookup in address.[0m
+  [34m-->[0m test/RareSkills.t.sol:18:28:
+[34m   |[0m
+[34m18 |[0m         (bool success, ) = [33maddress(_skillsCoin).mint[0m{value: 1 ether}("");
+[34m   |[0m                            [1;33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m
+No files changed, compilation skipped
+
+Running 1 test for test/NestedArray.t.sol:NestedArrayTest
+[32m[PASS][0m testGetNestedSum() (gas: 1533396)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 929.96µs
+No files changed, compilation skipped
+
+Running 1 test for test/Tupledore.t.sol:TupledoreTest
+[32m[PASS][0m testTupledore() (gas: 52749)
+Test result: [32mok[0m. 1 passed; 0 failed; finished in 424.83µs
