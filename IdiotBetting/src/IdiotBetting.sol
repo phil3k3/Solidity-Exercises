@@ -28,6 +28,7 @@ contract IdiotBettingGame {
 
     function claimPrize() public {
         require(block.timestamp > endTime && msg.sender == candidate);
-        candidate.call{value: address(this).balance}("");
+        (bool ok,) = candidate.call{value: address(this).balance}("");
+        require(ok, "TX failed");
     }
 }

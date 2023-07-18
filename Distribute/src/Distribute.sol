@@ -18,8 +18,10 @@ contract Distribute {
         require(address(this).balance % addresses.length == 0, "must be divisble");
         uint256 amount = address(this).balance / addresses.length;
         for(uint8 j = 0; j < addresses.length; j++) {
-            addresses[j].call{value: amount}("");
-            emit FractionDistributed(addresses[j], amount);
+            (bool ok,) = addresses[j].call{value: amount}("");
+            if (ok) {
+                emit FractionDistributed(addresses[j], amount);
+            }
         }
     }
 }

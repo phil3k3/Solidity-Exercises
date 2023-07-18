@@ -9,6 +9,7 @@ contract Withdraw {
 
     // @notice make this contract able to receive ether from anyone and anyone can call withdraw below to withdraw all ether from it
     function withdraw() public {
-        msg.sender.call{value: address(this).balance}("");
+        (bool ok,) = msg.sender.call{value: address(this).balance}("");
+        require(ok, "TX failed");
     }
 }

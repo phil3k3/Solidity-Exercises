@@ -36,7 +36,8 @@ contract TimelockEscrow {
     function sellerWithdraw(address buyer) external {
         require(msg.sender == seller);
         require(buyOrders[buyer].timestamp < block.timestamp);
-        msg.sender.call{value: buyOrders[buyer].amount}("");
+        (bool ok,) = msg.sender.call{value: buyOrders[buyer].amount}("");
+        require(ok, "TX failed");
         delete buyOrders[buyer];
     }
 
@@ -45,7 +46,8 @@ contract TimelockEscrow {
      */
     function buyerWithdraw() external {
        require(msg.sender != seller && buyOrders[msg.sender].timestamp > block.timestamp);
-       msg.sender.call{value: buyOrders[msg.sender].amount}("");
+       (bool ok,) = msg.sender.call{value: buyOrders[msg.sender].amount}("");
+       require(ok, "TX failed");
        delete buyOrders[msg.sender];
     }
 

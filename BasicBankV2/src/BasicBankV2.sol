@@ -17,6 +17,7 @@ contract BasicBankV2 {
     function removeEther(uint256 amount) external payable {
         require(balances[msg.sender] >= amount);
         balances[msg.sender] -= amount;
-        msg.sender.call{value: amount}("");
+        (bool ok,) = msg.sender.call{value: amount}("");
+        require(ok, "TX failed");
     }
 }

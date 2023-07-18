@@ -5,7 +5,7 @@ contract IsPrime {
     /**
      * The goal of this exercise is to return if "number" is prime or not (true or false)
      */
-    function isPrime(uint256 number) public view returns (bool) {
+    function isPrime(uint256 number) public pure returns (bool) {
        for(uint256 j = 2; j < number; j++) {
          if (number % j == 0) {
             return false;
